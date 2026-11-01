@@ -23,14 +23,16 @@ Configuración de mi Arch Linux con Hyprland, administrada con [GNU Stow](https:
 ## Instalación
 
 ```sh
-git clone https://github.com/<usuario>/dotfiles ~/dotfiles
+git clone https://github.com/Iseace/dotfiles ~/dotfiles
 cd ~/dotfiles
 ./install.sh              # enlaza todos los paquetes
 ./install.sh hypr waybar  # o solo algunos
 ./install.sh --packages   # instala también los paquetes de pacman y AUR
 ```
 
-Los archivos que ya existían se mueven a `~/.dotfiles-backup-<fecha>/` antes de crear los symlinks.
+Los archivos que ya existían se mueven a `~/.dotfiles-backup-<fecha>/` antes de crear los symlinks. Si `stow` falla, se restauran solos.
+
+Cierra Flameshot antes de instalar: reescribe su configuración al instante y choca con el symlink.
 
 ## Valores locales (no se versionan)
 

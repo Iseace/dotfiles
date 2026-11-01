@@ -36,8 +36,15 @@ for pkg in "${PKGS[@]}"; do
 done
 [[ -d "$BACKUP" ]] && echo "Respaldo de los archivos anteriores: $BACKUP"
 
+# Si stow falla, regresa los archivos respaldados a su lugar
+restore() {
+    echo "stow falló; restaurando archivos desde $BACKUP"
+    [[ -d "$BACKUP" ]] && cp -a "$BACKUP"/. "$HOME"/
+    exit 1
+}
+
 # --no-folding: enlaza archivo por archivo, así los archivos locales (weather.env) no terminan dentro del repo
-stow --no-folding -v -d "$DOTFILES" -t "$HOME" "${PKGS[@]}"
+stow --no-folding -v -d "$DOTFILES" -t "$HOME" "${PKGS[@]}" || restore
 
 # Plantillas de valores locales que no se versionan
 if [[ ! -f "$HOME/.gitconfig.local" ]]; then
