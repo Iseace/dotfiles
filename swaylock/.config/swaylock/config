@@ -1,0 +1,91 @@
+########################
+# General Options
+########################
+
+# Run swaylock as a daemon
+daemonize
+
+# Show the number of failed unlock attempts
+show-failed-attempts
+
+# Set the wallpaper image
+image=~/Pictures/wallpaper.png
+
+# Apply blur and vignette effects to the image
+effect-blur=15x15
+effect-vignette=1:1
+
+# Set the overall background color with transparency
+color=00000033
+
+# Set the font for the text displayed by swaylock
+font="Inter"
+
+########################
+# Indicator Settings
+########################
+
+# Enable the unlock indicator
+indicator
+
+# Configure the appearance of the indicator
+indicator-radius=200
+indicator-thickness=20
+
+# Colors for various parts of the indicator
+line-color=11111b
+ring-color=181825
+inside-color=00000033
+key-hl-color=cba6f7
+separator-color=00000000
+text-color=cdd6f4
+text-caps-lock-color=""
+
+# Colors for the verification state
+line-ver-color=11111b
+ring-ver-color=cba6f7
+inside-ver-color=00000033
+text-ver-color=cdd6f4
+
+# Colors for the wrong password state
+line-wrong-color=11111b
+ring-wrong-color=f38ba8
+inside-wrong-color=00000033
+text-wrong-color=f38ba8
+
+# Colors for the clear state
+line-clear-color=11111b
+ring-clear-color=cba6f7
+inside-clear-color=00000033
+text-clear-color=cdd6f4
+
+# Highlight color for backspace
+bs-hl-color=f38ba8
+
+########################
+# Time and Date Settings
+########################
+
+# Display the clock
+clock
+
+# Format for the date and time
+datestr=%a, %B %e
+timestr=%I:%M %p
+
+########################
+# Miscellaneous Options
+########################
+
+# Time to fade in the lock screen 
+fade-in=0.3
+
+# Ignore empty passwords 
+ignore-empty-password
+
+# Grace period settings 
+grace=0
+grace-no-touch
+
+# Hide keyboard layout
+hide-keyboard-layout

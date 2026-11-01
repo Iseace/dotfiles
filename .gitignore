@@ -1,0 +1,7 @@
+# Secretos y valores locales: nunca se versionan
+*.env
+.gitconfig.local
+# Respaldos
+*.bak*
+*.save
+*~

@@ -1,0 +1,99 @@
+@import "colors.rasi"
+/*config*/
+configuration {
+    show-icons: true;
+    drun-display-format: "{name}";
+}
+
+* {
+    font: "JetBrainsMono 12";
+}
+
+/*window*/
+window {
+    width: 800px;
+    border: 0px solid;
+    border-color: @foreground;
+    border-radius: 12px;
+    background-color: @background;
+    padding: 0px;
+}
+
+/*container*/
+mainbox {
+    spacing: 10px;
+    padding: 20px;
+    children: [ "inputbar", "listview" ];
+}
+
+/*inputbar*/
+inputbar {
+    spacing: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: @background;
+    text-color: @foreground;
+    children: [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: "󰣇";
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+entry {
+    background-color: inherit;
+    text-color: inherit;
+    placeholder: "Search";
+    placeholder-color: inherit;
+}
+
+/*list elements*/
+listview {
+    columns: 2;
+    lines: 6;
+    scrollbar: false;
+    spacing: 10px;
+    text-color: @foreground;
+    background-color: transparent;
+    border: 0px;
+}
+
+/*elements*/
+element {
+    spacing: 15px;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: @background;
+    text-color: @foreground;
+}
+
+element.normal.normal {
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+element.alternate.normal {
+    background-color: @background-alt;
+    text-color: @foreground;
+}
+
+element.selected.normal {
+    background-color: @selected;
+    text-color: @foreground;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size: 32px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}

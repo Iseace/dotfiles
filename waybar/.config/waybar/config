@@ -1,0 +1,80 @@
+{
+  "layer": "bottom",
+  "position": "bottom",
+  "height": 43,
+  "spacing": 0,
+  "fixed-center": true,
+  "modules-left": [
+    "custom/logo",
+    "hyprland/workspaces",
+    "tray"
+  ],
+  "modules-center": [
+    "custom/clock"
+  ],
+  "modules-right": [
+    "hyprland/language",
+    "pulseaudio",
+    "network",
+    "battery",
+    "custom/powermenu"
+  ],
+  "custom/logo": {
+    "format": "󰣇",
+    "on-click": "rofi -show drun",
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "on-click": "activate",
+    "sort-by-number": true
+  },
+  "network": {
+    "interface": "wlan0",
+    "format": "{ifname}",
+    "format-wifi": "wf: {essid}",
+    "format-ethernet": "eth:  {ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "",
+    "tooltip": false
+  },
+  "custom/clock": {
+    "format": " {text} ",
+    "exec": "date +'%H:%M %A, %b %d' | awk '{print tolower($0)}'",
+    "interval": 3
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "en",
+    "format-es": "es",
+    "format-fr": "fr",
+    "on-click": "hyprctl switchxkblayout company--usb-device- next",
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "vol: {volume}%",
+    "on-click": "pamixer --toggle-mute",
+    "on-click-right": "pavucontrol",
+    "tooltip": false
+  },
+  "battery": {
+    "format": "bat: {capacity}%",
+    "format-charging": " ch: {capacity}%",
+    "interval": 20,
+    "tooltip": false
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "mon: {percent}% ",
+    "tooltip": false
+  },
+  "custom/powermenu": {
+    "format": "",
+    "on-click": "sleep 0.1 && ~/.config/hypr/scripts/powermenu.sh",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 7,
+    "tooltip": false
+  }
+}

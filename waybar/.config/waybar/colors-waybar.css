@@ -1,0 +1,23 @@
+@define-color foreground #d1d6d7;
+@define-color background #0a0a0a;   /* más oscuro que #0f1214 */
+@define-color cursor     #d1d6d7;
+
+/* Normal colors */
+@define-color color0  #0a0a0a;   /* Black */
+@define-color color1  #5f6f6e;   /* Red → gris verdoso oscuro */
+@define-color color2  #6c8483;   /* Green → verde azulado suave */
+@define-color color3  #7a8686;   /* Yellow → gris cálido medio */
+@define-color color4  #7e8f8d;   /* Blue → gris azulado */
+@define-color color5  #859392;   /* Magenta → gris verdoso claro */
+@define-color color6  #98a5a6;   /* Cyan → gris azulado claro */
+@define-color color7  #d1d6d7;   /* White → tu foreground */
+
+/* Bright colors */
+@define-color color8  #8a8d8e;   /* Bright Black → gris medio */
+@define-color color9  #6f8584;   /* Bright Red */
+@define-color color10 #7fa09d;   /* Bright Green */
+@define-color color11 #8a9796;   /* Bright Yellow */
+@define-color color12 #90a09d;   /* Bright Blue */
+@define-color color13 #96a9a8;   /* Bright Magenta */
+@define-color color14 #aab5b6;   /* Bright Cyan */
+@define-color color15 #ffffff;   /* Bright White → más claro que fg */
